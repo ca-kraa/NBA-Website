@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet" />
+  </head>
+  <style>
+    .background-miring {
+      background-color: #f87171;
+      width: 100%;
+      height: 18.75rem;
+      transform: skewY(-5deg);
+      transform-origin: top left;
+    }
+  </style>
+  <body class="font-poppins h-screen">
+    <header class="bg-zinc-800">
+      <nav class="flex justify-between items-center w-[92%] mx-auto">
+        <div>
+          <img
+            class="w-20 h-20 px-3.5 py-6 bg-red-400 justify-center items-center inline-flex"
+            src="https://i.ibb.co/cvHcB5c/NBA-National-Basketball-Association-Logo-PNG2160p-Vector69-Com.png"
+            alt="" />
+        </div>
+        <div>
+          <ul
+            class="flex md:flex-row items-center gap-[4vw] text-white font-bold text-sm">
+            <li>
+              <a class="hover:text-gray-400" href="#"
+                >Games <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </li>
+            <li>
+              <a class="hover:text-gray-400" href="#"
+                >Schedule <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </li>
+            <li>
+              <a class="hover:text-gray-400" href="#"
+                >Playoffs <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </li>
+            <li>
+              <a class="hover:text-gray-400" href="#"
+                >News <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </li>
+            <li>
+              <a class="hover:text-gray-400" href="#"
+                >Stats <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </li>
+            <li>
+              <a class="hover:text-gray-400" href="#"
+                >Teams
+                <i class="fa-solid fa-caret-down"></i>
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-gray-400" href="#"
+                >Players <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </li>
+            <li>
+              <a class="hover:text-gray-400" href="#"
+                >Fantasy <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </li>
+            <li>
+              <a class="hover:text-gray-400" href="#"
+                >NBABet <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <button
+            class="bg-amber-300 text-white px-5 py-2 rounded hover:bg-amber-600">
+            League Pass
+          </button>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero grid grid-cols-1 md:grid-cols-2 p-8 gap-8 md:gap-16">
+      <div
+        class="flex flex-col items-center justify-center text-center space-y-4">
+        <img
+          class="w-[200px] h-[100px] mb-2"
+          src="https://i.ibb.co/cvHcB5c/NBA-National-Basketball-Association-Logo-PNG2160p-Vector69-Com.png"
+          alt="Logo" />
+        <svg
+          width="440"
+          height="70"
+          viewBox="0 0 440 70"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 35H100" stroke="#253B73" stroke-width="3" />
+          <path d="M340 35H440" stroke="#253B73" stroke-width="3" />
+          <path
+            d="M129.875 40.4792C131.125 40.0208 132.417 39.7917 133.792 39.7917C136.583 39.7917 139.021 40.6667 141.104 42.4167L134.562 48.9583C132.392 46.5134 130.791 43.6174 129.875 40.4792ZM157.417 30.4167C161.521 33.4792 165.958 34.2292 170.708 32.6667C170.771 33.1042 170.833 33.8958 170.833 35C170.833 37.1458 170.312 39.5417 169.333 42.1875C168.354 44.8125 167.146 46.9375 165.729 48.5417L152.542 35.3958L157.417 30.4167ZM143.271 44.6667C145.479 47.8542 145.937 51.3333 144.625 55.125C141.667 54.2708 139.021 52.9375 136.812 51.1042L143.271 44.6667ZM150.396 37.5417L163.542 50.7292C159.021 54.6875 153.708 56.3542 147.667 55.7083C148.104 54.3333 148.333 52.8333 148.333 51.2083C148.333 49.9167 148.042 48.3958 147.458 46.6667C146.875 44.9375 146.187 43.5208 145.417 42.4167L150.396 37.5417ZM143.354 40.2083C141.456 38.5105 139.128 37.3649 136.625 36.8958C134.083 36.4167 131.646 36.5625 129.292 37.3542C129.229 36.8958 129.167 36.1042 129.167 35C129.167 32.8542 129.687 30.4583 130.667 27.8125C131.646 25.1875 132.854 23.0625 134.271 21.4583L148.146 35.3958L143.354 40.2083ZM157.417 26.1042C154.625 22.6667 153.979 18.9167 155.479 14.875C156.771 15.2083 158.25 15.8333 159.917 16.7917C161.562 17.7292 162.917 18.6667 163.958 19.5625L157.417 26.1042ZM170.125 29.5417C168.875 29.9792 167.583 30.2083 166.208 30.2083C163.937 30.2083 161.75 29.5417 159.667 28.1667L166.104 21.8125C167.937 24.1042 169.271 26.6667 170.125 29.5417ZM150.396 33.1458L136.458 19.2708C140.979 15.3125 146.292 13.6458 152.354 14.2917C151.896 15.6667 151.667 17.1667 151.667 18.7917C151.667 20.2917 152 21.9792 152.687 23.875C153.375 25.75 154.167 27.25 155.208 28.3542L150.396 33.1458Z"
+            fill="#253B73" />
+          <path
+            d="M269.875 40.4792C271.125 40.0208 272.417 39.7917 273.792 39.7917C276.583 39.7917 279.021 40.6667 281.104 42.4167L274.562 48.9583C272.392 46.5134 270.791 43.6174 269.875 40.4792ZM297.417 30.4167C301.521 33.4792 305.958 34.2292 310.708 32.6667C310.771 33.1042 310.833 33.8958 310.833 35C310.833 37.1458 310.312 39.5417 309.333 42.1875C308.354 44.8125 307.146 46.9375 305.729 48.5417L292.542 35.3958L297.417 30.4167ZM283.271 44.6667C285.479 47.8542 285.937 51.3333 284.625 55.125C281.667 54.2708 279.021 52.9375 276.812 51.1042L283.271 44.6667ZM290.396 37.5417L303.542 50.7292C299.021 54.6875 293.708 56.3542 287.667 55.7083C288.104 54.3333 288.333 52.8333 288.333 51.2083C288.333 49.9167 288.042 48.3958 287.458 46.6667C286.875 44.9375 286.187 43.5208 285.417 42.4167L290.396 37.5417ZM283.354 40.2083C281.456 38.5105 279.128 37.3649 276.625 36.8958C274.083 36.4167 271.646 36.5625 269.292 37.3542C269.229 36.8958 269.167 36.1042 269.167 35C269.167 32.8542 269.687 30.4583 270.667 27.8125C271.646 25.1875 272.854 23.0625 274.271 21.4583L288.146 35.3958L283.354 40.2083ZM297.417 26.1042C294.625 22.6667 293.979 18.9167 295.479 14.875C296.771 15.2083 298.25 15.8333 299.917 16.7917C301.562 17.7292 302.917 18.6667 303.958 19.5625L297.417 26.1042ZM310.125 29.5417C308.875 29.9792 307.583 30.2083 306.208 30.2083C303.937 30.2083 301.75 29.5417 299.667 28.1667L306.104 21.8125C307.937 24.1042 309.271 26.6667 310.125 29.5417ZM290.396 33.1458L276.458 19.2708C280.979 15.3125 286.292 13.6458 292.354 14.2917C291.896 15.6667 291.667 17.1667 291.667 18.7917C291.667 20.2917 292 21.9792 292.687 23.875C293.375 25.75 294.167 27.25 295.208 28.3542L290.396 33.1458Z"
+            fill="#253B73" />
+          <path
+            d="M191.825 42.6708C193.575 42.0292 195.383 41.7083 197.308 41.7083C201.217 41.7083 204.629 42.9333 207.546 45.3833L198.388 54.5417C195.349 51.1187 193.108 47.0644 191.825 42.6708ZM230.383 28.5833C236.129 32.8708 242.342 33.9208 248.992 31.7333C249.079 32.3458 249.167 33.4542 249.167 35C249.167 38.0042 248.438 41.3583 247.067 45.0625C245.696 48.7375 244.004 51.7125 242.021 53.9583L223.558 35.5542L230.383 28.5833ZM210.579 48.5333C213.671 52.9958 214.313 57.8667 212.475 63.175C208.333 61.9792 204.629 60.1125 201.538 57.5458L210.579 48.5333ZM220.554 38.5583L238.958 57.0208C232.629 62.5625 225.192 64.8958 216.733 63.9917C217.346 62.0667 217.667 59.9667 217.667 57.6917C217.667 55.8833 217.258 53.7542 216.442 51.3333C215.625 48.9125 214.663 46.9292 213.583 45.3833L220.554 38.5583ZM210.696 42.2917C208.038 39.9147 204.78 38.3108 201.275 37.6542C197.717 36.9833 194.304 37.1875 191.008 38.2958C190.921 37.6542 190.833 36.5458 190.833 35C190.833 31.9958 191.563 28.6417 192.933 24.9375C194.304 21.2625 195.996 18.2875 197.979 16.0417L217.404 35.5542L210.696 42.2917ZM230.383 22.5458C226.475 17.7333 225.571 12.4833 227.671 6.825C229.479 7.29166 231.55 8.16666 233.883 9.50833C236.188 10.8208 238.083 12.1333 239.542 13.3875L230.383 22.5458ZM248.175 27.3583C246.425 27.9708 244.617 28.2917 242.692 28.2917C239.513 28.2917 236.45 27.3583 233.533 25.4333L242.546 16.5375C245.113 19.7458 246.979 23.3333 248.175 27.3583ZM220.554 32.4042L201.042 12.9792C207.371 7.4375 214.808 5.10416 223.296 6.00833C222.654 7.93333 222.333 10.0333 222.333 12.3083C222.333 14.4083 222.8 16.7708 223.763 19.425C224.725 22.05 225.833 24.15 227.292 25.6958L220.554 32.4042Z"
+            fill="#FFFFFE" />
+        </svg>
+
+        <h1 class="text-white text-4xl font-bold mb-4">National Basketball</h1>
+        <h1 class="text-white text-4xl font-bold mb-8">Association</h1>
+        <div
+          class="w-72 bg-white rounded-3xl p-6 flex flex-col items-center space-y-4">
+          <div class="w-full mb-4">
+            <div class="mb-1 text-red-400 text-xl font-bold">
+              Boston Celtics
+            </div>
+            <div class="mt-1 text-zinc-800 text-xl font-bold">
+              VS Miami Heat
+            </div>
+          </div>
+          <div class="flex flex-row items-center space-x-4">
+            <div class="flex flex-col items-center space-y-1">
+              <div class="text-zinc-800 text-3xl font-bold">02</div>
+              <div class="text-gray-500 text-base font-bold">Days</div>
+            </div>
+            <div class="flex flex-col items-center space-y-1">
+              <div class="text-zinc-800 text-3xl font-bold">11</div>
+              <div class="text-gray-500 text-base font-bold">Hrs</div>
+            </div>
+            <div class="flex flex-col items-center space-y-1">
+              <div class="text-zinc-800 text-3xl font-bold">45</div>
+              <div class="text-gray-500 text-base font-bold">Mins</div>
+            </div>
+            <div class="flex flex-col items-center space-y-1">
+              <div class="text-zinc-800 text-3xl font-bold">10</div>
+              <div class="text-gray-500 text-base font-bold">Secs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom Kanan: Gambar -->
+      <div class="hidden md:block">
+        <img
+          class="w-[500px] h-[500px] ml-10"
+          src="https://i.ibb.co/nz4PGY1/image.png"
+          alt="Gambar" />
+      </div>
+    </section>
+    <div class="container mx-auto px-8 py-16">
+      <div class="flex flex-row justify-between items-center mb-4">
+        <h1 class="text-2xl underline">LATEST MATCH</h1>
+        <button class="rounded-full bg-indigo-900 text-white text-lg py-2 px-4">
+          View More &gt;&gt;&gt;
+        </button>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4">
+        <div class="rounded-lg p-4 drop-shadow-lg">
+          <div class="w-80 h-24 relative">
+            <img
+              class="w-20 h-16 left-0 top-[18px] absolute"
+              src="https://i.ibb.co/zx0nvwm/image.png" />
+            <div
+              class="left-[106px] top-[25px] absolute text-zinc-800 text-4xl font-semibold">
+              97 - 110
+            </div>
+            <div
+              class="left-[125px] top-0 absolute text-zinc-800 text-base font-normal">
+              May 25, 2023
+            </div>
+            <div
+              class="left-[146px] top-[78px] absolute text-zinc-800 text-base font-normal">
+              League
+            </div>
+            <img
+              class="w-20 h-16 left-[262px] top-[17px] absolute"
+              src="https://i.ibb.co/Y7T5kss/image.png" />
+          </div>
+        </div>
+        <div class="rounded-lg p-4 drop-shadow-lg">
+          <div class="w-80 h-24 relative">
+            <img
+              class="w-17 h-16 left-0 top-[18px] absolute"
+              src="https://i.ibb.co/bbvNpYS/image.png" />
+            <div
+              class="left-[106px] top-[25px] absolute text-zinc-800 text-4xl font-semibold">
+              97 - 110
+            </div>
+            <div
+              class="left-[125px] top-0 absolute text-zinc-800 text-base font-normal">
+              May 25, 2023
+            </div>
+            <div
+              class="left-[146px] top-[78px] absolute text-zinc-800 text-base font-normal">
+              League
+            </div>
+            <img
+              class="w-20 h-16 left-[262px] top-[17px] absolute"
+              src="https://i.ibb.co/Y7T5kss/image.png" />
+          </div>
+        </div>
+        <div class="rounded-lg p-4">
+          <div class="w-80 h-24 relative">
+            <img
+              class="w-20 h-16 left-0 top-[18px] absolute"
+              src="https://i.ibb.co/zx0nvwm/image.png" />
+            <div
+              class="left-[106px] top-[25px] absolute text-zinc-800 text-4xl font-semibold">
+              97 - 110
+            </div>
+            <div
+              class="left-[125px] top-0 absolute text-zinc-800 text-base font-normal">
+              May 25, 2023
+            </div>
+            <div
+              class="left-[146px] top-[78px] absolute text-zinc-800 text-base font-normal">
+              League
+            </div>
+            <img
+              class="w-20 h-16 left-[262px] top-[17px] absolute"
+              src="https://i.ibb.co/Y7T5kss/image.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 py-8">
+      <div class="background-miring mt-20">
+        <div class="grid grid-cols-3 gap-4">
+          <div class="relative ml-4">
+            <div class="rounded-lg p-4">
+              <div class="text-white text-xl font-bold mb-3">Schedule</div>
+              <div class="w-80 text-white text-5xl font-bold mb-3">
+                NEXT MATCH SCHEDULE
+              </div>
+              <div class="bg-white w-56 h-14 rounded-full mt-10">
+                <div class="absolute mt-4 ml-10 text-black font-semibold">
+                  Fri, May 26 <i class="fa-solid fa-caret-down ml-10"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative mt-8 bg-white rounded">
+            <div class="rounded-lg p-4">
+              <img
+                class="w-20 h-16 left-0 top-[18px] absolute"
+                src="https://i.ibb.co/zx0nvwm/image.png" />
+              <div
+                class="left-[106px] top-[25px] absolute text-zinc-800 text-4xl font-semibold">
+                97 - 110
+              </div>
+              <div
+                class="left-[125px] top-0 absolute text-zinc-800 text-base font-normal">
+                May 25, 2023
+              </div>
+              <div
+                class="left-[146px] top-[78px] absolute text-zinc-800 text-base font-normal">
+                League
+              </div>
+              <img
+                class="w-20 h-16 left-[262px] top-[17px] absolute"
+                src="https://i.ibb.co/Y7T5kss/image.png" />
+            </div>
+          </div>
+          <div class="relative mt-8 bg-white rounded mr-2">
+            <div class="rounded-lg p-4">
+              <img
+                class="w-20 h-20 left-0 top-[18px] absolute"
+                src="https://i.ibb.co/zx0nvwm/image.png"
+              />
+              <div class="left-[106px] top-[25px] absolute text-zinc-800 text-4xl font-semibold">
+                97 - 110
+              </div>
+              <div class="left-[125px] top-0 absolute text-zinc-800 text-base font-normal">
+                May 25, 2023
+              </div>
+              <div class="left-[146px] top-[78px] absolute text-zinc-800 text-base font-normal">
+                League
+              </div>
+              <img
+                class="w-20 h-20 left-[262px] top-[17px] absolute"
+                src="https://i.ibb.co/Y7T5kss/image.png"
+              />
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+
+    </div>
+
+    <div class="container mx-auto px-4 py-8">
+      <div class="flex">
+        <div class="w-2/3">
+          <div class="bg-indigo-900 m-2 p-4 rounded-lg shadow-lg">
+            <h2 class="text-white text-lg font-bold mb-2">Card Title</h2>
+            <p class="text-white text-right">See More >>></p>
+          </div>
+          <div class="flex items-center bg-white m-2 p-4 rounded-lg shadow-lg">
+            <img class="w-32 h-24 rounded-lg mr-4" src="https://images.unsplash.com/photo-1572181804423-c5df037abf13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Article image">
+            <div class="flex flex-col items-start">
+              <div class="flex items-center">
+                <button class="rounded-full bg-amber-300 text-white mr-2 text-sm py-1 px-3 ">Article</button>
+                <span class="text-gray-500 text-sm">3 Hours ago</span>
+              </div>
+              <h2 class="text-gray-900 text-lg font-bold mt-2">NBA Mailbag: What's it like to defend Jokic?</h2>
+              <p class="text-gray-500 mt-2"> Jamal Crawford explains what it's like to play against Nikola Jokic and names his all-time, straight-out-of-high-school team.</p>
+            </div>
+          </div>
+          <div class="flex items-center bg-white m-2 p-4 rounded-lg shadow-lg">
+            <img class="w-32 h-24 rounded-lg mr-4" src="https://images.unsplash.com/photo-1572181804423-c5df037abf13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Article image">
+            <div class="flex flex-col items-start">
+              <div class="flex items-center">
+                <button class="rounded-full bg-amber-300 text-white mr-2 text-sm py-1 px-3 ">Article</button>
+                <span class="text-gray-500 text-sm">3 Hours ago</span>
+              </div>
+              <h2 class="text-gray-900 text-lg font-bold mt-2">NBA Mailbag: What's it like to defend Jokic?</h2>
+              <p class="text-gray-500 mt-2"> Jamal Crawford explains what it's like to play against Nikola Jokic and names his all-time, straight-out-of-high-school team.</p>
+            </div>
+          </div>
+          <div class="flex items-center bg-white m-2 p-4 rounded-lg shadow-lg">
+            <img class="w-32 h-24 rounded-lg mr-4" src="https://images.unsplash.com/photo-1572181804423-c5df037abf13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Article image">
+            <div class="flex flex-col items-start">
+              <div class="flex items-center">
+                <button class="rounded-full bg-amber-300 text-white mr-2 text-sm py-1 px-3 ">Article</button>
+                <span class="text-gray-500 text-sm">3 Hours ago</span>
+              </div>
+              <h2 class="text-gray-900 text-lg font-bold mt-2">NBA Mailbag: What's it like to defend Jokic?</h2>
+              <p class="text-gray-500 mt-2"> Jamal Crawford explains what it's like to play against Nikola Jokic and names his all-time, straight-out-of-high-school team.</p>
+            </div>
+          </div>
+          <div class="flex items-center bg-white m-2 p-4 rounded-lg shadow-lg">
+            <img class="w-32 h-24 rounded-lg mr-4" src="https://images.unsplash.com/photo-1572181804423-c5df037abf13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Article image">
+            <div class="flex flex-col items-start">
+              <div class="flex items-center">
+                <button class="rounded-full bg-amber-300 text-white mr-2 text-sm py-1 px-3 ">Article</button>
+                <span class="text-gray-500 text-sm">3 Hours ago</span>
+              </div>
+              <h2 class="text-gray-900 text-lg font-bold mt-2">NBA Mailbag: What's it like to defend Jokic?</h2>
+              <p class="text-gray-500 mt-2"> Jamal Crawford explains what it's like to play against Nikola Jokic and names his all-time, straight-out-of-high-school team.</p>
+            </div>
+          </div>
+          <div class="flex items-center bg-white m-2 p-4 rounded-lg shadow-lg">
+            <img class="w-32 h-24 rounded-lg mr-4" src="https://images.unsplash.com/photo-1572181804423-c5df037abf13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Article image">
+            <div class="flex flex-col items-start">
+              <div class="flex items-center">
+                <button class="rounded-full bg-amber-300 text-white mr-2 text-sm py-1 px-3 ">Article</button>
+                <span class="text-gray-500 text-sm">3 Hours ago</span>
+              </div>
+              <h2 class="text-gray-900 text-lg font-bold mt-2">NBA Mailbag: What's it like to defend Jokic?</h2>
+              <p class="text-gray-500 mt-2"> Jamal Crawford explains what it's like to play against Nikola Jokic and names his all-time, straight-out-of-high-school team.</p>
+            </div>
+          </div>
+          <div class="flex items-center bg-white m-2 p-4 rounded-lg shadow-lg">
+            <img class="w-32 h-24 rounded-lg mr-4" src="https://images.unsplash.com/photo-1572181804423-c5df037abf13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Article image">
+            <div class="flex flex-col items-start">
+              <div class="flex items-center">
+                <button class="rounded-full bg-amber-300 text-white mr-2 text-sm py-1 px-3 ">Article</button>
+                <span class="text-gray-500 text-sm">3 Hours ago</span>
+              </div>
+              <h2 class="text-gray-900 text-lg font-bold mt-2">NBA Mailbag: What's it like to defend Jokic?</h2>
+              <p class="text-gray-500 mt-2"> Jamal Crawford explains what it's like to play against Nikola Jokic and names his all-time, straight-out-of-high-school team.</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="w-1/3">
+          <div class="flex flex-col">
+            <div class="bg-indigo-900 m-2 p-4 rounded-lg shadow-lg">
+              <h2 class="text-white text-lg font-bold mb-2">NBA Social Impact</h2>
+            </div>
+            <div class="bg-white m-2 p-4 rounded-lg shadow-lg">
+              <div class="flex items-center">
+                <img class="w-auto h-12 ml-10" src="https://i.ibb.co/NTkjRct/image.png" alt="Image">
+                <span class="ml-14">Social Impact Hub</span>
+                <i class="fas fa-arrow-right ml-20"></i>
+              </div>
+            </div>
+            <div class="bg-white m-2 p-4 rounded-lg shadow-lg">
+              <div class="flex items-center">
+                <img class="w-auto h-12 ml-10" src="https://i.ibb.co/CPHSB5L/image.png" alt="Image">
+                <span class="ml-14">NBA Care</span>
+                <i class="fas fa-arrow-right ml-20"></i>
+              </div>
+            </div>
+            <div class="bg-white m-2 p-4 rounded-lg shadow-lg">
+              <div class="flex items-center">
+                <img class="w-auto h-12 ml-10" src="https://i.ibb.co/rZ2zSkg/image.png" alt="Image">
+                <span class="ml-14">NBA Foundation</span>
+                <i class="fas fa-arrow-right ml-20"></i>
+              </div>
+            </div>
+            <div class="bg-white m-2 p-4 rounded-lg shadow-lg">
+              <div class="flex items-center">
+                <img class="w-auto h-12 ml-10" src="https://i.ibb.co/Jmj9qXW/image.png" alt="Image">
+                <span class="ml-14">National Basketball Social Justice Coalition</span>
+                <i class="fas fa-arrow-right ml-20"></i>
+              </div>
+            </div>
+            <div class="bg-white m-2 p-4 rounded-lg shadow-lg">
+              <div class="flex items-center">
+                <img class="w-auto h-12 ml-10" src="https://i.ibb.co/pWWDvpJ/image.png" alt="Image">
+                <span class="ml-14">Jr. NBA</span>
+                <i class="fas fa-arrow-right ml-20"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-indigo-900 m-2 p-4 rounded-lg shadow-lg">
+            <h2 class="text-white text-lg font-bold mb-2">NBA Social Media</h2>
+          </div>
+          <div class="bg-white m-2 p-4 rounded-lg shadow-lg flex flex-col items-center justify-around space-y-4">
+            <div class="flex items-center justify-around space-x-4">
+              <i class="fab fa-facebook-f text-3xl hover:text-blue-600"></i>
+              <i class="fab fa-twitter text-3xl  hover:text-blue-400"></i>
+              <i class="fab fa-instagram text-3xl  hover:text-pink-600"></i>
+            </div>
+            <div class="flex items-center justify-around space-x-4">
+              <i class="fa-brands fa-tiktok text-3xl hover:text-black"></i>
+              <i class="fab fa-youtube text-3xl hover:text-red-700"></i>
+            </div>
+            <div class="flex items-center justify-around space-x-4">
+              <i class="fa-brands fa-twitch text-3xl hover:text-purple-600"></i>
+              <i class="fab fa-snapchat-ghost text-3xl hover:text-yellow-500"></i>
+            </div>
+          </div>
+
+          <div class="bg-indigo-900 m-2 p-4 rounded-lg shadow-lg">
+            <h2 class="text-white text-lg font-bold mb-2">NBA Headlines</h2>
+          </div>
+          <div class="bg-white m-2 p-4 rounded-lg shadow-lg flex flex-col items-center">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-basketball-ball text-xl mr-4 text-red-400"></i>
+              <div>
+                <h3 class="text-lg mb-1">2023 NBA Playoffs Schedule</h3>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-basketball-ball text-xl mr-4 text-red-400"></i>
+              <div>
+                <h3 class="text-lg mb-1">5 Takeaways from Celtics’ wire-to-wire win</h3>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-basketball-ball text-xl mr-4 text-red-400"></i>
+              <div>
+                <h3 class="text-lg mb-1">Yao steps down as head of Chinese national league</h3>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-basketball-ball text-xl mr-4 text-red-400"></i>
+              <div>
+                <h3 class="text-lg mb-1">Consensus Mock Draft : Who goes after Wembanyama?</h3>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-basketball-ball text-xl mr-4 text-red-400"></i>
+              <div>
+                <h3 class="text-lg mb-1">Chasing History : Nuggets reach new heights</h3>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-basketball-ball text-xl mr-4 text-red-400"></i>
+              <div>
+                <h3 class="text-lg mb-1">NBA Mailbag : What it like to defend Jokic?</h3>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-basketball-ball text-xl mr-4 text-red-400"></i>
+              <div>
+                <h3 class="text-lg mb-1">Lowry starts for injured Vincent in Game 5</h3>
+              </div>
+            </div>
+          </div>
+
+
+          </div>
+
+        </div>
+        <div class="bg-white m-2 p-4 rounded-lg shadow-lg">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lg font-bold">LEAGUE PASS</h2>
+            <a href="#" class="text-sm text-gray-600 underline">See More >></a>
+          </div>
+          <div class="bg-indigo-900 p-4 rounded-lg shadow-lg text-center text-white">
+            <img
+              class="w-18 h-10 mx-auto mb-4"
+              src="https://i.ibb.co/Xk1FSsF/image.png"
+              alt=""
+            />
+            <h1 class="text-xl font-bold mb-2">NONSTOP PLAYOFF COVERAGE</h1>
+            <p class="mb-4">
+              Get League Pass for postseason coverage , live audio feeds of any games, and recaps on demand.
+            </p>
+            <button class="bg-red-400 text-white px-4 py-2 rounded-lg font-bold hover:bg-indigo-100">
+              Subcribe Now
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="p-6 bg-gray-800 text-gray-100  ">
+      <footer class="p-6 bg-gray-800 text-gray-100">
+        <div class="container flex mx-auto gap-x-3 gap-y-8 space-x-8">
+          <div class="flex flex-col space-y-4 ml-8">
+            <h2 class="font-bold">NBA ORGANIZATION</h2>
+            <div class="flex flex-col space-y-2 text-sm text-white">
+              <a rel="noopener noreferrer" href="#">NBA Official</a>
+              <a rel="noopener noreferrer" href="#">NBA Careers</a>
+            </div>
+          </div>
+          <div class="flex flex-col space-y-4 ">
+            <h2 class="font-bold">NBA INITIATIVES</h2>
+            <div class="flex flex-col space-y-2 text-sm text-white">
+              <a rel="noopener noreferrer" href="#">NBA Cares</a>
+              <a rel="noopener noreferrer" href="#">Jr. NBA</a>
+              <a rel="noopener noreferrer" href="#">NBA Foundation</a>
+              <a rel="noopener noreferrer" href="#">Social Justice Coalition</a>
+            </div>
+          </div>
+          <div class="flex flex-col space-y-4">
+            <h2 class="font-bold">ACROSS THE LEAGUE </h2>
+            <div class="flex flex-col space-y-2 text-sm text-white">
+              <a rel="noopener noreferrer" href="#">NBA Communications</a>
+              <a rel="noopener noreferrer" href="#">Lockervision</a>
+              <a rel="noopener noreferrer" href="#">NBA Transactions</a>
+            </div>
+          </div>
+          <div class="flex flex-col space-y-4">
+            <h2 class="font-bold">Shop</h2>
+            <div class="flex flex-col space-y-2 text-sm text-white">
+              <a rel="noopener noreferrer" href="#">Global Stores</a>
+              <a rel="noopener noreferrer" href="#">NYC Store</a>
+              <a rel="noopener noreferrer" href="#">NBA Auctions</a>
+              <a rel="noopener noreferrer" href="#">NBA Photostore</a>
+            </div>
+          </div>
+          <div class="flex flex-col space-y-4 mr-8">
+            <h2 class="font-bold">SUBSCRIPTIONS</h2>
+            <div class="flex flex-col space-y-2 text-sm text-white">
+              <a rel="noopener noreferrer" href="#">Global Stores</a>
+              <a rel="noopener noreferrer" href="#">NYC Store</a>
+              <button
+                class="
+                  bg-amber-300
+                  text-white
+                  px-5
+                  py-2
+                  rounded
+                  hover:bg-amber-600
+                "
+              >
+                League Pass
+              </button>
+              <a rel="noopener noreferrer" href="#">Customer Support</a>
+            </div>
+          </div>
+        </div>
+
+      <div class="flex items-center justify-center px-6 pt-12 text-sm">
+        <span class="text-white"></span>
+      </div>
+      <div class="p-4">
+        <div class="border-b border-white mb-4"></div>
+        <div class="flex justify-between items-center">
+          <div class="text-white text-sm">
+            © 2023 My Website. All rights reserved.
+            <p class="text-white text-sm bt-2"> Privacy Policy   |   Terms of Use   |   Accessibility and Closed Captions   |   Customer Support   |   Manage Cookies</p>
+          <p class="text-white text-sm bt-2">If you are having difficulty accessing any content on this website, please visit our</p>
+          <p class="text-white text-sm bt-2">NBA.com is part of Warner Media, LLC’s Turner Sports & Entertainment Digital Network</p>
+        <p class="text-white text-sm bt-2"><span class="font-bold">Warner</span>Media</p>
+        </div>
+          <div class="flex items-center space-x-4">
+            <i class="fab fa-facebook-f text-3xl hover:text-blue-600"></i>
+            <i class="fab fa-twitter text-3xl hover:text-blue-400"></i>
+            <i class="fab fa-instagram text-3xl hover:text-pink-600"></i>
+            <i class="fa-brands fa-tiktok text-3xl hover:text-black"></i>
+            <i class="fab fa-youtube text-3xl hover:text-red-700"></i>
+            <i class="fa-brands fa-twitch text-3xl hover:text-purple-600"></i>
+            <i class="fab fa-snapchat-ghost text-3xl hover:text-yellow-500"></i>
+          </div>
+        </div>
+      </div>
+
+
+    </footer>
+
+
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css"
+      rel="stylesheet" />
+  </body>
+</html>
