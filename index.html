@@ -29,6 +29,32 @@
       transform: skewY(-5deg);
       transform-origin: top left;
     }
+    .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 64px);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1460 700%22%3E%3Cpath d=%22M282 4H10V336L282 4Z%22 fill=%22%23FBCD44%22/%3E%3Cpath d=%22M1168 0H297.087L0 369.5V700L1019.46 471L1168 0Z%22 fill=%22%23232B2B%22/%3E%3Cpath d=%22M1460 0H1178.24L1027 471L1460 660V0Z%22 fill=%22%23D96359%22/%3E%3C/svg%3E");
+  background-size: cover;
+}
+.hero-text {
+  flex: 1;
+  padding: 2rem;
+  color: white;
+}
+.hero-image {
+  flex: 1;
+  padding: 2rem;
+}
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.countdown-card {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+    
   </style>
   <body class="font-poppins h-screen">
     <header class="bg-zinc-800">
